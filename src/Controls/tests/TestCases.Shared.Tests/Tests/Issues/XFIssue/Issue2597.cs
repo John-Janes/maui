@@ -12,26 +12,25 @@ public class Issue2597 : _IssuesUITest
 
 	public override string Issue => "Stepper control .IsEnabled doesn't work";
 
-	// [Test]
-	// [Category(UITestCategories.Stepper)]
-	// [FailsOnIOSWhenRunningOnXamarinUITest]
-// 	public void Issue2597Test()
-// 	{
-// #if __IOS__
-// 		App.Tap(x => x.Marked("Increment"));
-// #else
-// 		App.Tap("+");
-// #endif
+	[Test]
+	[Category(UITestCategories.Stepper)]
+	
+	public void Issue2597Test()
+	{
 
-// 		App.WaitForElement(q => q.Marked("Stepper value is 0"));
+ 		App.Tap("Increment");
+
+		App.Tap("+");
 
 
-// #if __IOS__
-// 		App.Tap(x => x.Marked("Decrement"));
-// #else
-// 		App.Tap("−");
-// #endif
+		App.WaitForElement("Stepper value is 0");
 
-// 		App.WaitForElement(q => q.Marked("Stepper value is 0"));
-// 	}
+
+
+ 		App.Tap("Decrement");
+
+		App.Tap("−");
+
+		App.WaitForElement("Stepper value is 0");
+	}
 }
