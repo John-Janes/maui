@@ -1,4 +1,4 @@
-﻿#if ANDROID
+﻿
 using NUnit.Framework;
 using UITest.Appium;
 using UITest.Core;
@@ -18,11 +18,10 @@ public class Issue1355 : _IssuesUITest
 	[Test]
 	[Category(UITestCategories.LifeCycle)]
 	[Category(UITestCategories.Compatibility)]
-	[FailsOnAndroidWhenRunningOnXamarinUITest]
+	
 	public void SwitchMainPageOnAppearing()
 	{
 		// Without the fix, this would crash. If we're here at all, the test passed.
 		App.WaitForNoElement(Success);
 	}
 }
-#endif
