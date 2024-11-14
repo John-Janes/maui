@@ -1,5 +1,4 @@
-/*
-#if ANDROID
+
 using NUnit.Framework;
 using UITest.Appium;
 using UITest.Core;
@@ -85,5 +84,4 @@ public class Bugzilla30317 : _IssuesUITest
 		App.WaitForElement("PageThreeTabTwoItem5");
 	}
 }
-#endif
-*/
+
