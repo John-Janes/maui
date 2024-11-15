@@ -1,4 +1,4 @@
-﻿#if IOS
+﻿
 using NUnit.Framework;
 using UITest.Appium;
 using UITest.Core;
@@ -16,13 +16,10 @@ namespace Microsoft.Maui.TestCases.Tests.Issues
 		[Test]
 		[Category(UITestCategories.Navigation)]
 		[Category(UITestCategories.Compatibility)]
-		[FailsOnAndroidWhenRunningOnXamarinUITest]
-		[FailsOnIOSWhenRunningOnXamarinUITest]
-		[FailsOnMacWhenRunningOnXamarinUITest]
+		
 		public void Bugzilla31688Test()
 		{
 			App.WaitForNoElement("Page3");
 		}
 	}
 }
-#endif
